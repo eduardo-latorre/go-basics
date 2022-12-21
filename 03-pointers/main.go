@@ -9,13 +9,17 @@ import "fmt"
 // * = Reference and Dereference operator - Gets the value from RAM location
 
 func main() {
+
+	a := "Eduardo"
+	fmt.Printf("Var: %v, Pointer: %v\n", a, &a)
+
 	// Print pointer address
 	x := 7
 	fmt.Printf("Var x value: %v and memory address: %v\n", x, &x)
 
 	// Storing the pointer to another var
 	y := &x
-	fmt.Printf("Var y value from x address %v\n", y)
+	fmt.Printf("Var y value from x address %v and var type: %T\n", y, y)
 
 	// Changing the value from reference
 	*y = 10 // Dereferenced
