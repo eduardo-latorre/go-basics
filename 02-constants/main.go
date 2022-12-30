@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // Basic declaration using standard for constants, using capital letters
-const SUPERHERO = "Superman"
+const SUPERHERO string = "Superman"
 
 func main() {
 	// Mutiple declaration
