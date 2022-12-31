@@ -25,10 +25,10 @@ func main() {
 
 	fmt.Printf("The result of the add is: %v\n", adder(num1, num2))
 
-	// 03 - Using a function with multiple values
-	var result int
-	result = proAdder(2, 4, 5, 6, 3, 2, 5, 67, 3)
-	fmt.Printf("Result of Pro Adder is: %v\n", result)
+	// 03 - Using a function with multiple values and multiple return
+	var result, values int
+	result, values = proAdder(2, 4, 5, 6, 3, 2, 5, 67, 3)
+	fmt.Printf("Result of Pro Adder is %v of %v number added\n", result, values)
 }
 
 // Simple function
@@ -41,11 +41,11 @@ func adder(num1 int, num2 int) int {
 	return num1 + num2
 }
 
-// Adds multiple numbers, it expects a slice
-func proAdder(values ...int) int {
+// Adds multiple numbers, it expects a slice and returns result and amount of values added
+func proAdder(values ...int) (int, int) {
 	var result int
 	for _, value := range values {
 		result += value
 	}
-	return result
+	return result, len(values)
 }
