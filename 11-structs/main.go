@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 // Structs are multi-type value format
-// Are veru similar to Java classes
+// Are very similar to Java classes
+// There're not inheritance
+// There're not Superclasses
 type engineer struct {
 	name    string
 	age     uint
