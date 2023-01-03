@@ -66,7 +66,7 @@ func main() {
 	fmt.Println(qualifications)
 
 	//As it can't be added manually a new value in the Slice it can be done by using Append
-	qualifications = append(qualifications, 4.3, 5.3, 4.2, 4.8, 7.0)
+	qualifications = append(qualifications, 4.3, 5.3, 4.2, 4.8, 7.0, 3.1, 2.9, 1.2)
 
 	fmt.Println(qualifications)
 
@@ -74,7 +74,7 @@ func main() {
 	lenght := len(qualifications)
 
 	for i := 0; i < lenght; i++ {
-		for j := i; j < lenght; j++ {
+		for j := i + 1; j < lenght; j++ {
 			if qualifications[i] > qualifications[j] {
 				aux := qualifications[i]
 				qualifications[i] = qualifications[j]
